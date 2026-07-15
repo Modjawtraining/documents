@@ -288,6 +288,28 @@
     font-size:0.96rem;
   }
 
+  .theme-visual{
+    border-radius: var(--radius);
+    overflow:hidden;
+    margin-bottom:24px;
+    border:1px solid var(--border);
+    box-shadow: 0 10px 26px rgba(59,74,99,0.06);
+  }
+  .theme-visual img{
+    width:100%;
+    max-height:340px;
+    object-fit:cover;
+    display:block;
+  }
+  .theme-visual.small{
+    max-width:280px;
+  }
+  .theme-visual.small img{
+    max-height:260px;
+    object-fit:contain;
+    background:#0d1526;
+  }
+
   /* Document / link cards */
   .doc-grid{
     display:grid;
@@ -509,34 +531,6 @@
     </div>
   </section>
 
-  <section class="band">
-    <div class="wrap">
-      <div class="cards">
-        <div class="card">
-          <div class="icon">📄</div>
-          <h3 data-lang="fr">Supports de formation</h3>
-          <h3 data-lang="en">Training materials</h3>
-          <p data-lang="fr">Protocoles cliniques, trucs et astuces, et guides d'utilisation TWIM.</p>
-          <p data-lang="en">Clinical protocols, tips &amp; tricks, and TWIM usage guides.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🦷</div>
-          <h3 data-lang="fr">Flux numériques</h3>
-          <h3 data-lang="en">Digital workflows</h3>
-          <p data-lang="fr">Intégration 3Shape, CBCT et scan facial dans votre flux MODJAW.</p>
-          <p data-lang="en">3Shape, CBCT and face scan integration into your MODJAW workflow.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🔬</div>
-          <h3 data-lang="fr">Bibliographie scientifique</h3>
-          <h3 data-lang="en">Scientific bibliography</h3>
-          <p data-lang="fr">Publications de référence sur la technologie MODJAW.</p>
-          <p data-lang="en">Reference publications on MODJAW technology.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="resources wrap" id="formation">
 
     <div class="section-title">
@@ -562,6 +556,10 @@
 
     <!-- ============ 1. SUPPORTS DE FORMATION / TRAINING MATERIALS ============ -->
     <div class="theme-block" id="formation-materials">
+
+      <div class="theme-visual">
+        <img src="images/formation-enregistrement.png" alt="Enregistrement MODJAW avec la tiare et la fourchette">
+      </div>
 
       <div data-lang="fr">
         <div class="theme-head">
@@ -618,9 +616,6 @@
               <a href="https://vimeo.com/812868005/e1c9d98c6b" target="_blank" rel="noopener">Voir la vidéo ↗</a>
             </div>
           </div>
-        </div>
-        <div class="note-box">
-          <strong>Ressource complémentaire :</strong> un document sur MODJAW et les orthèses d'avancée mandibulaire (Mandibular Advancement Devices) est également disponible <a href="documents/modjaw-mandibular-advancement-devices.pdf" target="_blank">en anglais ici ↓</a>.
         </div>
       </div>
 
@@ -680,15 +675,16 @@
             </div>
           </div>
         </div>
-        <div class="note-box">
-          <strong>Bonus resource:</strong> a document on MODJAW and Mandibular Advancement Devices (MAD) is also available <a href="documents/modjaw-mandibular-advancement-devices.pdf" target="_blank">here ↓</a>.
-        </div>
       </div>
 
     </div>
 
     <!-- ============ 2. 3SHAPE ============ -->
     <div class="theme-block" id="threeshape">
+
+      <div class="theme-visual">
+        <img src="images/threeshape-scanner-twim.png" alt="Scan intra-oral intégré dans TWIM">
+      </div>
 
       <div data-lang="fr">
         <div class="theme-head">
@@ -747,6 +743,10 @@
     <!-- ============ 3. CBCT ============ -->
     <div class="theme-block" id="cbct">
 
+      <div class="theme-visual small">
+        <img src="images/cbct-crane-twim.png" alt="Modèle de crâne CBCT intégré dans TWIM">
+      </div>
+
       <div data-lang="fr">
         <div class="theme-head">
           <div class="theme-eyebrow">03 · Flux numérique</div>
@@ -764,7 +764,7 @@
             </div>
           </div>
           <div class="doc-card">
-            <div class="doc-icon">🦴</div>
+            <div class="doc-icon">🩻</div>
             <h3>Protocole alternatif : DICOM → STL</h3>
             <p>Une méthode alternative (moins précise que les logiciels dédiés, à valider avec votre laboratoire) : conversion DICOM → STL avec InVesalius, recalage avec les scans intra-oraux sur Exocad, puis import dans MODJAW via la section Advanced &gt; Crâne.</p>
             <div class="doc-actions">
@@ -794,7 +794,7 @@
             </div>
           </div>
           <div class="doc-card">
-            <div class="doc-icon">🦴</div>
+            <div class="doc-icon">🩻</div>
             <h3>Alternative protocol: DICOM → STL</h3>
             <p>An alternative method (not as precise as dedicated segmentation software, please consult your lab): DICOM → STL conversion with InVesalius, alignment with intraoral scans in Exocad, then import into MODJAW via the Advanced &gt; Skull section.</p>
             <div class="doc-actions">
@@ -811,6 +811,10 @@
 
     <!-- ============ 4. FACE SCAN ============ -->
     <div class="theme-block" id="facescan">
+
+      <div class="theme-visual">
+        <img src="images/facescan-twim.png" alt="Scan facial intégré dans TWIM">
+      </div>
 
       <div data-lang="fr">
         <div class="theme-head">
@@ -868,6 +872,10 @@
 
     <!-- ============ 5. LABORATOIRE ============ -->
     <div class="theme-block" id="laboratoire">
+
+      <div class="theme-visual">
+        <img src="images/laboratoire-banner.png" alt="Au labo, tutoriels et FAQ MODJAW">
+      </div>
 
       <div data-lang="fr">
         <div class="theme-head">
